@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
 
+    
     // Toggle mobile menu
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
