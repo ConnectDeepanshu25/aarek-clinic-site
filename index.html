@@ -1,121 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarek Clinic - Smart Polyclinic</title>
+    <meta name="description" content="AaRek Fresh delivers healthy, fresh meals to Indian workplaces through smart AI-powered vending machines. Transform your office food experience.">
+    <meta name="keywords" content="office food, workplace meals, healthy snacks, AI vending, corporate catering">
+    <meta property="og:title" content="AaRek Fresh - Smart Workplace Food Solutions">
+    <meta property="og:description" content="Revolutionary AI-powered vending delivering fresh, healthy meals to your workplace in under 3 minutes.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <title>AaRek Fresh - Smart Workplace Food Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-hospital-symbol"></i>
-                <span>Aarek Clinic</span>
+                <h2>AaRek Fresh</h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#corporate">For Corporates</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-button">Get Started</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Health, Our Priority</h1>
-            <p>Experience advanced healthcare with our smart polyclinic solutions. Comprehensive medical care with cutting-edge technology.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Book Appointment</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Fresh, Healthy Meals at Your Workplace in <span class="highlight">Under 3 Minutes</span></h1>
+                <p class="hero-subtitle">Revolutionary AI-powered smart vending delivering chef-curated, nutritionist-approved Indian meals directly to your office. No waiting, no compromising on health.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Find Locations</button>
+                    <button class="btn-secondary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScFOdfpex8OIhIp2ikE3gUp_AL0KQJWWPGy0n5usZbSe3ZHyA/viewform', '_blank')">Take 2 minute survey</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Employees</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Corporate Partners</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Availability</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="vending-machine">
+                    <div class="machine-screen">
+                        <div class="screen-content">
+                            <div class="product-display">
+                                <div class="product-item active">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center" alt="Fresh Salad Bowl">
+                                    <span>Mediterranean Bowl</span>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=200&fit=crop&crop=center" alt="Protein Bowl">
+                                    <span>Protein Power Bowl</span>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=300&h=200&fit=crop&crop=center" alt="Quinoa Bowl">
+                                    <span>Quinoa Delight</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machine-body">
+                        <div class="status-lights">
+                            <div class="light green"></div>
+                            <div class="light green"></div>
+                            <div class="light yellow"></div>
+                        </div>
+                        <div class="dispenser">
+                            <div class="door"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-image">
-            <i class="fas fa-user-md"></i>
+        <div class="floating-elements">
+            <div class="floating-salad floating-1">🥗</div>
+            <div class="floating-salad floating-2">🥙</div>
+            <div class="floating-salad floating-3">🍲</div>
+            <div class="floating-salad floating-4">🥑</div>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="services-preview">
+    <!-- Menu Showcase -->
+    <section id="menu" class="menu-section">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-stethoscope"></i>
-                    <h3>General Medicine</h3>
-                    <p>Comprehensive primary healthcare services</p>
+            <div class="section-header">
+                <h2>Fresh & Nutritious Menu</h2>
+                <p>Chef-curated, nutritionist-approved meals packed with flavor and nutrition</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="salads">Fresh Salads</button>
+                <button class="filter-btn" data-filter="bowls">Power Bowls</button>
+                <button class="filter-btn" data-filter="wraps">Healthy Wraps</button>
+                <button class="filter-btn" data-filter="snacks">Smart Snacks</button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&crop=center" alt="Mediterranean Fresh Salad">
+                        <div class="nutritional-badge">350 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Mediterranean Fresh Bowl</h3>
+                        <p>Crisp lettuce, cherry tomatoes, cucumber, olives, feta cheese with herb vinaigrette</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag protein">High Protein</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Cardiology</h3>
-                    <p>Advanced heart care and monitoring</p>
+
+                <div class="menu-item" data-category="bowls">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop&crop=center" alt="Protein Power Bowl">
+                        <div class="nutritional-badge">425 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Protein Power Bowl</h3>
+                        <p>Grilled chicken, quinoa, roasted vegetables, avocado with tahini dressing</p>
+                        <div class="item-tags">
+                            <span class="tag protein">25g Protein</span>
+                            <span class="tag gluten-free">Gluten Free</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Neurology</h3>
-                    <p>Specialized neurological treatments</p>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop&crop=center" alt="Rainbow Quinoa Salad">
+                        <div class="nutritional-badge">380 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Rainbow Quinoa Delight</h3>
+                        <p>Tri-color quinoa, mixed greens, bell peppers, chickpeas with lemon herb dressing</p>
+                        <div class="item-tags">
+                            <span class="tag vegan">Vegan</span>
+                            <span class="tag superfood">Superfood</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>Diagnostics</h3>
-                    <p>State-of-the-art diagnostic facilities</p>
+
+                <div class="menu-item" data-category="wraps">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?w=400&h=300&fit=crop&crop=center" alt="Spiced Veggie Wrap">
+                        <div class="nutritional-badge">320 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Spiced Veggie Wrap</h3>
+                        <p>Whole wheat tortilla, roasted vegetables, hummus, fresh herbs and Indian spices</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag fiber">High Fiber</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bowls">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&h=300&fit=crop&crop=center" alt="Asian Fusion Bowl">
+                        <div class="nutritional-badge">395 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Asian Fusion Bowl</h3>
+                        <p>Brown rice, edamame, carrots, cabbage, tofu with sesame ginger dressing</p>
+                        <div class="item-tags">
+                            <span class="tag vegan">Vegan</span>
+                            <span class="tag low-carb">Low Carb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=400&h=300&fit=crop&crop=center" alt="Energy Boost Bites">
+                        <div class="nutritional-badge">180 Cal</div>
+                    </div>
+                    <div class="item-content">
+                        <h3>Energy Boost Bites</h3>
+                        <p>Date, almond, coconut, chia seeds rolled into perfect energy spheres</p>
+                        <div class="item-tags">
+                            <span class="tag vegan">Vegan</span>
+                            <span class="tag energy">Natural Energy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How AaRek Fresh Works</h2>
+                <p>From selection to satisfaction in just 3 simple steps</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <div class="icon-circle">1</div>
+                    </div>
+                    <h3>Select Your Meal</h3>
+                    <p>Browse our fresh menu on the smart screen, filter by dietary preferences, and choose your perfect meal</p>
+                    <div class="step-visual">
+                        <div class="phone-mockup">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop&crop=center" alt="Menu Selection">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <div class="icon-circle">2</div>
+                    </div>
+                    <h3>Quick Payment</h3>
+                    <p>Pay seamlessly with UPI, cards, or mobile wallets. Our secure payment system processes in seconds</p>
+                    <div class="step-visual">
+                        <div class="payment-icons">
+                            <span>💳</span>
+                            <span>📱</span>
+                            <span>🏦</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <div class="icon-circle">3</div>
+                    </div>
+                    <h3>Collect Your Meal</h3>
+                    <p>Your meal is prepared fresh and dispensed from the AaRek vending machine in our signature transparent packaging. Collect and enjoy immediately!</p>
+                    <div class="step-visual">
+                        <div class="package-mockup">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center" alt="Fresh Package">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Section -->
+    <section id="corporate" class="corporate-section">
+        <div class="container">
+            <div class="corporate-content">
+                <div class="corporate-text">
+                    <h2>Transform Your Workplace Wellness</h2>
+                    <p>Join 100+ companies who have revolutionized their office food experience with AaRek Fresh smart vending solutions.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <div class="benefit-icon">⚡</div>
+                            <h4>Boost Productivity</h4>
+                            <p>No more long lunch breaks. Fresh meals in under 3 minutes.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">💚</div>
+                            <h4>Employee Wellness</h4>
+                            <p>Nutritionist-approved meals improve health and satisfaction.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🔧</div>
+                            <h4>Zero Maintenance</h4>
+                            <p>We handle everything - installation, restocking, maintenance.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">📊</div>
+                            <h4>Real-time Analytics</h4>
+                            <p>Track usage, preferences, and wellness impact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="corporate-cta">
+                        <button class="btn-primary">Schedule Demo</button>
+                        <button class="btn-secondary">Download Brochure</button>
+                    </div>
+                </div>
+                
+                <div class="corporate-visual">
+                    <div class="office-scene">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=400&fit=crop&crop=center" alt="Modern Office">
+                        <div class="floating-stats">
+                            <div class="stat-bubble">
+                                <span class="stat-number">73%</span>
+                                <span class="stat-text">Productivity Increase</span>
+                            </div>
+                            <div class="stat-bubble">
+                                <span class="stat-number">89%</span>
+                                <span class="stat-text">Employee Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real feedback from real people who love AaRek Fresh</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"AaRek Fresh has completely changed our office lunch culture. The salads are incredibly fresh and the convenience is unmatched!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5ab?w=60&h=60&fit=crop&crop=face" alt="Priya Sharma">
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Software Engineer, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Finally, healthy food that doesn't compromise on taste. The Mediterranean bowl is my daily go-to!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Rahul Patel">
+                        <div class="author-info">
+                            <h4>Rahul Patel</h4>
+                            <span>Marketing Manager, StartupXYZ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our employees love the variety and quality. It's been a game-changer for workplace wellness."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face" alt="Anjali Singh">
+                        <div class="author-info">
+                            <h4>Anjali Singh</h4>
+                            <span>HR Director, Innovation Labs</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>123 Healthcare Avenue<br>Medical District, City 12345</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@aarekclinic.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Hours</h3>
-                            <p>Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-5PM</p>
+                    <h2>Ready to Transform Your Workplace?</h2>
+                    <p>Get in touch with us to bring fresh, healthy meals to your office. We'll handle everything from installation to ongoing support.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>corporate@aarek.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    <form id="contactForm">
+                        <h3>Corporate Inquiry</h3>
+                        <div class="form-group">
+                            <input type="text" id="companyName" placeholder="Company Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="employees" placeholder="Number of Employees" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Tell us about your requirements" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -125,7 +418,60 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Aarek Clinic. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AaRek Fresh</h3>
+                    <p>Revolutionizing workplace nutrition through smart technology and fresh, healthy meals.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aarek-team/" target="_blank" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/aarekteam" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#corporate">Corporate Solutions</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Food Safety</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li>Bangalore</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AaRek Fresh. All rights reserved. | Designed with ❤️ for healthier workplaces</p>
+            </div>
         </div>
     </footer>
 
