@@ -2,13 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="AaRek Fresh delivers healthy, fresh meals to Indian workplaces through smart AI-powered vending machines. Transform your office food experience.">
     <meta name="keywords" content="office food, workplace meals, healthy snacks, AI vending, corporate catering">
+    
+    <!-- Mobile-specific meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AaRek Fresh">
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="msapplication-TileColor" content="#14b8a6">
+    <meta name="msapplication-navbutton-color" content="#14b8a6">
+    
+    <!-- Prevent tap highlighting on mobile -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Open Graph and social sharing -->
     <meta property="og:title" content="AaRek Fresh - Smart Workplace Food Solutions">
     <meta property="og:description" content="Revolutionary AI-powered vending delivering fresh, healthy meals to your workplace in under 3 minutes.">
     <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aarekfresh.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AaRek Fresh - Smart Workplace Food Solutions">
+    <meta name="twitter:description" content="Revolutionary AI-powered vending delivering fresh, healthy meals to your workplace.">
+    
     <title>AaRek Fresh - Smart Workplace Food Solutions</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +55,7 @@
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#corporate">For Corporates</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="cta-button">Get Started</a></li>
+                <li><a href="#menu" class="cta-button">Cart</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -256,7 +283,7 @@
                         <div class="icon-circle">3</div>
                     </div>
                     <h3>Collect Your Meal</h3>
-                    <p>Your meal is prepared fresh and dispensed from the AaRek vending machine in our signature transparent packaging. Collect and enjoy immediately!</p>
+                    <p>Your fresh meal is prepared and dispensed from the AaRek vending machine. Collect and enjoy!</p>
                     <div class="step-visual">
                         <div class="package-mockup">
                             <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop&crop=center" alt="Fresh Package">
@@ -299,14 +326,21 @@
                     </div>
                     
                     <div class="corporate-cta">
-                        <button class="btn-primary">Schedule Demo</button>
                         <button class="btn-secondary">Download Brochure</button>
                     </div>
                 </div>
                 
                 <div class="corporate-visual">
                     <div class="office-scene">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=400&fit=crop&crop=center" alt="Modern Office">
+                        <div class="office-image">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&crop=center" alt="Modern Office Environment">
+                            <div class="office-overlay">
+                                <div class="vending-highlight">
+                                    <div class="vending-icon">🤖</div>
+                                    <span>AaRek Smart Vending</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="floating-stats">
                             <div class="stat-bubble">
                                 <span class="stat-number">73%</span>
@@ -367,6 +401,103 @@
                         <div class="author-info">
                             <h4>Anjali Singh</h4>
                             <span>HR Director, Innovation Labs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-header">
+                    <h2>About AaRek Fresh</h2>
+                    <p class="section-subtitle">Revolutionizing workplace nutrition through innovation, technology, and authentic taste</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-story">
+                        <div class="story-content">
+                            <h3>Our Story</h3>
+                            <p>AaRek Fresh was born from a simple observation: India's modern professionals deserve better. With 73% of working professionals skipping lunch or settling for unhealthy options, we saw an opportunity to transform workplace nutrition.</p>
+                            
+                            <p>We're revolutionizing workplace nutrition for India's modern professionals through AI-powered smart vending solutions. We deliver chef-curated, nutritionist-approved, desk-friendly Indian meals directly to corporate environments—seamlessly blending technology, health, and authentic taste.</p>
+                            
+                            <p>What started as a mission to solve the workplace food crisis has evolved into a comprehensive ecosystem that prioritizes health, convenience, and taste without compromise.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-mission">
+                        <div class="mission-content">
+                            <h3>Our Mission</h3>
+                            <div class="mission-points">
+                                <div class="mission-point">
+                                    <div class="mission-icon">🥗</div>
+                                    <div>
+                                        <h4>Health First</h4>
+                                        <p>Every meal is nutritionist-approved and designed to fuel productivity and well-being</p>
+                                    </div>
+                                </div>
+                                <div class="mission-point">
+                                    <div class="mission-icon">⚡</div>
+                                    <div>
+                                        <h4>Instant Access</h4>
+                                        <p>Fresh, healthy meals delivered in under 3 minutes, 24/7 at your workplace</p>
+                                    </div>
+                                </div>
+                                <div class="mission-point">
+                                    <div class="mission-icon">🤖</div>
+                                    <div>
+                                        <h4>Smart Technology</h4>
+                                        <p>AI-powered vending solutions that learn and adapt to workplace preferences</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-values">
+                    <h3>What Sets Us Apart</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4>Quality Excellence</h4>
+                            <p>Chef-curated recipes using fresh, locally-sourced ingredients with rigorous quality standards</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Innovation Drive</h4>
+                            <p>Cutting-edge AI technology ensuring optimal inventory, freshness, and user experience</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Workplace Wellness</h4>
+                            <p>Dedicated to improving employee health, productivity, and satisfaction through better nutrition</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Authentic Flavors</h4>
+                            <p>Celebrating Indian cuisine with modern, health-conscious preparations that taste amazing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Employees Served</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Corporate Partners</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Availability</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3min</span>
+                            <span class="stat-label">Average Meal Time</span>
                         </div>
                     </div>
                 </div>
