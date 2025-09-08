@@ -85,10 +85,10 @@ class AaRekFresh {
                         behavior: 'smooth'
                     });
                     
-                    // Special handling for Cart button
-                    if (link.classList.contains('cta-button') && targetId === '#menu') {
+                    // Special handling for Contact Us button
+                    if (link.classList.contains('cta-button') && targetId === '#contact') {
                         setTimeout(() => {
-                            this.highlightMenuSection();
+                            this.highlightContactSection();
                         }, 500);
                     }
                 }
@@ -111,6 +111,16 @@ class AaRekFresh {
             menuSection.classList.add('highlight-section');
             setTimeout(() => {
                 menuSection.classList.remove('highlight-section');
+            }, 2000);
+        }
+    }
+
+    highlightContactSection() {
+        const contactSection = document.querySelector('#contact');
+        if (contactSection) {
+            contactSection.classList.add('highlight-section');
+            setTimeout(() => {
+                contactSection.classList.remove('highlight-section');
             }, 2000);
         }
     }
